@@ -1,11 +1,16 @@
+/* @Parameters
+ * minLength = 5
+ * maxLength = 1000
+ * seed = 50 for the function srand(seed)
+ * maxInstance = 50 number of instance for each attempt 
+ * STEP = 10 incrementing value for each experiment
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-/* Algoritmo Merge:
- * Dato che MergeSort implementa l'algoritmo Merge
- * anche MergeSort usa dei vettori di supporto
-*/
+/* Merge Algorithm */
 void Merge(int *A, int p, int q, int r)
 {
     int n1, n2, i, j, k;
@@ -54,9 +59,7 @@ void Merge(int *A, int p, int q, int r)
     }
 }
 
-/* Algoritmo Ricorsivo MergeSort: lavora con gli indici
- * e usa la tecnica dived-et-conqer 
- */
+/* MergeSort Algorithm */
 void MergeSort(int *A, int p, int r)
 {
     int q;
@@ -69,7 +72,7 @@ void MergeSort(int *A, int p, int r)
     }
 }
 
-/* ESPERIMENTO SINGOLO */
+/* Single Expertiment */
 float singoloEsperimento(int len, int maxInstance)
 {
     float timeTot = 0;
@@ -79,9 +82,9 @@ float singoloEsperimento(int len, int maxInstance)
     for (int i = 0; i < maxInstance; i++)
     {
 
-        for (int j = 0; j < len; j++)    // Generatore Array di numeri Casuali:
-        {                                // tramite il metodo rand()%N, genera un numero tra 0 e N-1
-            A[j] = 1 + rand() % 1000000; // e metto il numero generato nell'array
+        for (int j = 0; j < len; j++)    // Generator Array of casual numbers:
+        {                                // through rand()%N, it generates a number between 0 e N-1
+            A[j] = 1 + rand() % 1000000; // and i put this number into the array
         }
 
         timeStart = clock();
@@ -97,8 +100,8 @@ float singoloEsperimento(int len, int maxInstance)
 /* ESPERIMENTO MERGE SORT */
 void esperimento(int minLen, int maxLen)
 {
-    int maxInstances = 50; // numero di istanze array per tentativo della lunghezza dell'array
-    int STEP = 10;         // mi aumenta numero di elementi dell'array
+    int maxInstances = 50; // number of instance for each attempt
+    int STEP = 10;         // increments elements of array one-by-one
                            // es: step = 3, 1° trial = 1 elemento nell'array, 2° trial = 4 elementi nell'array
                            // e mi da 4 tentativi perche step = 3 per arrivare a maxIstanza = 12 è 3*4salti = 12
     float time;
