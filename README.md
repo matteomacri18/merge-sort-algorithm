@@ -10,6 +10,6 @@ Average case: O(n*logn) <br> <br>
 
 Comparison between InsertionSort and MergeSort <br>
 We want to deduce the value of k (maximum crossing point between the curves) for your machine and implementation: <br>
-The identification of the maximum value k beyond which MergeSort i more and more efficient than InsertionSort.<br><br>
+The identification of the maximum value k beyond which MergeSort is always more efficient than InsertionSort.<br><br>
 
 ![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vRIUyy_Buvg2p5V_D-qRqKUeT0F6Ba9G1dJghFNWLZrwL86JvJQnWSTD16AflCXZQ/pubchart?oid=1771778787&format=image)
