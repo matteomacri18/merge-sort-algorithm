@@ -1,4 +1,4 @@
-# How Merge Sort Works
+# How Merge Sort works
 
 # Merge Sort Algorithm
 Implementation MergeSort Algorithm - from Steven S. Skenia - The algorithm design manual book
